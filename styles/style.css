@@ -2,4 +2,155 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+font-family: 'IBM Plex Mono', sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 1.3;
+color: var(--text-color);
+background-image: var(--bg-image);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
+
+/*header для desktop*/
+
+.header {
+  margin: 0 auto;
+  padding: 20px;
+  max-inline-size: 1440px;
+  block-size: max(668px, 100vh);
+  margin-block-end: 60px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--decor-color);
+  border-inline-start: 1px solid var(--decor-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--decor-color);
+  border-inline-end: 1px solid var(--decor-color);
+}
+
+.secret_element {
+  position: relative;
+}
+
+.secret_element::before {
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--shadow-color);
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  right: 28px;
+}
+
+.secret_element::after {
+  content: 'rec';
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--accent-color);
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 50px;
+}
+
+.header__theme-menu {
+  justify-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  inline-size: 70px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  color: var(--button-color);
+  text-align: center;
+  padding: 0 12px;
+}
+
+.header__theme-menu-button_type_light {
+
+}
+
+.header__theme-menu-button_active {
+
+}
+
+.header__theme-menu-button_type_auto {
+
+}
+
+.header__theme-menu-button_type_dark {
+
+}
+
+.header_title {
+  position: relative;
+  right: 20px;
+}
+
+.header_title-styles {
+  color: var(--title-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header_subtitle {
+  inline-size: min(50%, 490px);
+  place-self: center end;
+  /*подумать*/
+  margin-block-end: 35px; 
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: inherit;
+  background-color: var(--accent-color);
+  color: var(--subtitle-color);
+}
+
+/*header для tablets*/
+
+@media (768px <= width < 1024px)
+
+
+
+
+/*header для mobile*/
+
+@media (width < 768px)
