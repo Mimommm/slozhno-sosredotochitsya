@@ -2,26 +2,25 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-font-family: 'IBM Plex Mono', sans-serif;
-font-size: 18px;
-font-weight: 400;
-line-height: 1.3;
-color: var(--text-color);
-background-image: var(--bg-image);
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*header для desktop*/
-
 .header {
   margin: 0 auto;
   padding: 20px;
   max-inline-size: 1440px;
   block-size: max(668px, 100vh);
-  margin-block-end: 60px;
+  margin-block-end: 62px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
 }
@@ -108,11 +107,8 @@ background-attachment: fixed;
 }
 
 .header__theme-menu-button:focus {
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visdible {
   outline-offset: 1px;
+  border-block-end: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button_active {
@@ -123,6 +119,7 @@ background-attachment: fixed;
 .header_title {
   position: relative;
   right: 20px;
+  align-self: center;
 }
 
 .header_title-styles {
@@ -147,6 +144,10 @@ background-attachment: fixed;
 
 .content {
   margin-block-end: 60px;
+}
+
+.content (:last-of-child) {
+  margin-block-end: 30px;
 }
 
 .content_section {
@@ -200,10 +201,6 @@ background-attachment: fixed;
   margin-block-end: 10px;
 }
 
-.section_list-item .subtitle {
-  margin-block-end: 10px;
-}
-
 .advice .subtitle {
   margin-block-end: 20px;
 }
@@ -231,7 +228,6 @@ background-attachment: fixed;
 
 .images {
   inline-size: 100%;
-  padding-block-start: 20px;
   display: grid;
   align-items: stretch;
   grid-template-columns: repeat(3, 1fr);
@@ -283,7 +279,6 @@ background-attachment: fixed;
 }
 
 /*header for tablets*/
-
 @media (768px <= width < 1024px) {
 
   .header__theme-menu {
@@ -292,12 +287,13 @@ background-attachment: fixed;
 
   .header__theme-menu-list {
     flex-direction: column;
-    position: relative;
+    gap: 5px;
     padding-inline-end: 20px;
   }
 
   .header__theme-menu-item {
     inline-size: 50px;
+    block-size: 32px;
   }
 
   .header_title {
@@ -325,51 +321,53 @@ background-attachment: fixed;
     flex-direction: column;
   }
 }
-/*header for mobile*/
 
+/*header for mobile*/
 @media (width < 768px) {
 
   .header {
     padding: 10px;
-    margin-block-end: 40px;
+    margin-block-end: 56px;
   }
 
   .decorated-zone::before {
-    bottom: 10px;
+    bottom: 0;
     left: 10px;
   }
 
   .decorated-zone::after {
-    top: 10px;
+    top: 25px;
     right: 10px;
   }
 
   .secret_element::before {
-    top: 18px;
+    top: 34px;
     right: 18px;
   }
 
   .secret_element::after {
-    top: 10px;
+    top: 26px;
     right: 38px;
   }
   
   .header__theme-menu {
+    block-size: 55px;
     place-self: center end;
   }
 
   .header__theme-menu-list {
     flex-direction: column;
-    position: relative;
-    padding-inline-end: 20px;
+    gap: 7px;
   }
 
   .header__theme-menu-item {
-    inline-size: 50px;
+    block-size: 30px;
   }
 
   .header_title {
+    padding-block-start: 35px;
     position: static;
+    align-self: center;
   }
 
   .header_title-styles {
@@ -378,12 +376,13 @@ background-attachment: fixed;
   }
 
   .header_subtitle {
+    margin-block-start: 15px;
     inline-size: 100%;
     align-self: center;
   }
 
   .content {
-    margin-block-end: 40px;
+    margin-block-end: 32px;
   }
   
   .content_section {
@@ -394,7 +393,7 @@ background-attachment: fixed;
     margin-block-end: 50px;
   }
 
-  .section-why_how {
+  .section_why-how {
     display: block;
   }
   

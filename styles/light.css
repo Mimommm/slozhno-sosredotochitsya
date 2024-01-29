@@ -20,3 +20,45 @@
   --decor-color: #353430;
   --bg-image: url(../images/cover-image-light.png);
 }
+
+.theme_light .secret_element {
+  display: none;
+}
+
+.theme_light .secret_element::after,
+.theme_light .secret_element::before {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #353430;
+    --title-color: #FFC2E6;
+    --subtitle-color: #353430;
+    --section-title: #353430;
+    --accent-color: #FF8DCB;
+    --shadow-color: #FF0070;
+    --button-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.40);
+    --decor-color: #353430;
+    --bg-image: url(../images/cover-image-light.png);
+  }
+
+  .secret_element {
+    display: none;
+  }
+  
+  .secret_element::after,
+  .secret_element::before {
+    display: none;
+  }
+
+  .theme_dark .secret_element {
+    display: block;
+  }
+  
+  .theme_dark .secret_element::after,
+  .theme_dark .secret_element::before {
+    display: block;
+  }
+}
