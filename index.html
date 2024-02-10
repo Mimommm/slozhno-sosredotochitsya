@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="./styles/light.css">
   </head>
   <body class="page">
-    <div class="secret_element" aria-hidden="true">
-    </div>
     <header class="header decorated-zone">
+      <div class="secret_element" aria-hidden="true">
+      </div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -58,7 +58,7 @@
         <h2 class="section_title">
           Почему сосредоточиться так сложно
         </h2>
-        <ul class="section_list section_list-why">
+        <ul class="section_list section_list-why section_list-why_1">
           <li class="section_list-item">
             <h3 class="subtitle">
               Многозадачность
@@ -112,8 +112,8 @@
         <h2 class="section_title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
-        <article class="advice">
-          <h3 class="subtitle">5 простых (на самом деле не очень) советов</h3>
+        <!-- <article class="advice"> -->
+          <h3 class="advice subtitle">5 простых (на самом деле не очень) советов</h3>
           <ul class="section_list section_list-why">
             <li class="section_list-item">
               <h4 class="list-item_title">
@@ -160,36 +160,36 @@
         </article>
       </section>
       <section class="content_section">
-        <h3 class="subtitle">
+        <h2 class="subtitle">
           А можно в картинках?
-        </h3>
-        <article class="images">
-          <picture class="sunset">
+        </h2>
+        <ul class="images">
+          <li class="sunset">
             <source class="picture" srcset="./images/sunset.avif" type="image/avif">
             <source class="picture" srcset="./images/sunset.webp" type="image/webp">
             <img class="picture" loading="lazy" src="./images/sunset.png" alt="Изображение заката">
-          </picture>
-          <picture class="ice-cream">
+          </li>
+          <li class="ice-cream">
             <source class="picture" srcset="./images/ice-cream.avif" type="image/avif">
             <source class="picture" srcset="./images/ice-cream.webp" type="image/webp">
             <img class="picture" loading="lazy" src="./images/ice-cream.png" alt="Изображение миски с шариками мороженого в стиле аниме">
-          </picture>
-          <picture class="tape">
+          </li>
+          <li class="tape">
             <source class="picture" srcset="./images/tape.avif" type="image/avif">
             <source class="picture" srcset="./images/tape.webp" type="image/webp">
             <img class="picture" loading="lazy" src="./images/tape.png" alt="Изображение аудиокассеты на фоне монитора">
-          </picture>
-          <picture class="books">
+          </li>
+          <li class="books">
             <source class="picture" srcset="./images/books.avif" type="image/avif">
             <source class="picture" srcset="./images/books.webp" type="image/webp">
             <img class="picture" loading="lazy" src="./images/books.png" alt="Изображение книг">
-          </picture>
-          <picture class="street">
+          </li>
+          <li class="street">
             <source class="picture" srcset="./images/street.avif" type="image/avif">
             <source class="picture" srcset="./images/street.webp" type="image/webp">
             <img class="picture" loading="lazy" src="./images/street.png" alt="Изображение улицы">
-          </picture>
-        </article>
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer decorated-zone">
