@@ -88,6 +88,7 @@
 
 .header__theme-menu-list {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -100,13 +101,19 @@
   color: var(--button-color);
   text-align: center;
   padding: 0 12px;
+  display: block;
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--hover-color);
+  padding: 0 11px;
 }
 
 .header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   outline-offset: 1px;
   border-block-end: 1px solid var(--button-color);
 }
@@ -114,6 +121,7 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--button-color);
   pointer-events: none;
+  padding: 0 11px;
 }
 
 .header_title {
@@ -143,7 +151,7 @@
 }
 
 .content {
-  margin-block-end: 60px;
+  margin-block-end: 50px;
 }
 
 .content:last-of-child {
@@ -159,7 +167,7 @@
 }
 
 .content_section > .subtitle {
-  margin-block-end: 10px;
+  margin-block-end: 20px;
   grid-row-start: 1;
   grid-column-start: 2;
   max-block-size: 25px;
@@ -348,11 +356,11 @@
 
   .header {
     padding: 10px;
-    margin-block-end: 56px;
+    margin-block-end: 40px;
   }
 
   .decorated-zone::before {
-    bottom: 0;
+    bottom: 10px;
     left: 10px;
   }
 
@@ -362,17 +370,16 @@
   }
 
   .secret_element::before {
-    top: 34px;
+    top: 18px;
     right: 18px;
   }
 
   .secret_element::after {
-    top: 26px;
+    top: 10px;
     right: 38px;
   }
   
   .header__theme-menu {
-    block-size: 55px;
     place-self: center end;
   }
 
@@ -386,7 +393,6 @@
   }
 
   .header_title {
-    padding-block-start: 35px;
     position: static;
     align-self: center;
   }
@@ -397,7 +403,6 @@
   }
 
   .header_subtitle {
-    margin-block-start: 15px;
     inline-size: 100%;
     align-self: center;
   }
@@ -443,7 +448,7 @@
   }
 
   .images {
-    padding-block-start: 10px;
+    padding-block-start: 6px;
     display: flex;
     flex-direction: column;
     gap: 5px; 
