@@ -55,6 +55,8 @@
 
   .theme_dark .secret_element {
     display: block;
+    position: absolute;
+    right: 0;
   }
   
   .theme_dark .secret_element::after,
